@@ -51,11 +51,11 @@
 				let data = {
 					column: "id,post_id,title,author_name,cover,published_at" //需要的字段名
 				};
-				uni.request({
+				Lemix.request({
 					url: 'https://unidemo.dcloud.net.cn/api/banner/36kr',
 					data: data,
 					success: (data) => {
-						uni.stopPullDownRefresh();
+						Lemix.stopPullDownRefresh();
 						if (data.statusCode == 200) {
 							this.banner = data.data;
 						}
@@ -74,7 +74,7 @@
 					data.time = new Date().getTime() + "";
 					data.pageSize = 10;
 				}
-				uni.request({
+				Lemix.request({
 					url: 'https://unidemo.dcloud.net.cn/api/news',
 					data: data,
 					success: (data) => {
@@ -102,7 +102,7 @@
 					published_at: e.published_at,
 					title: e.title
 				}
-				uni.navigateTo({
+				Lemix.navigateTo({
 					url: "../list2detail-detail/list2detail-detail?detailDate=" + encodeURIComponent(JSON.stringify(detail))
 				})
 			},
@@ -126,7 +126,7 @@
 
 <style>
 	.banner {
-		height: 360upx;
+		height: 180px;
 		overflow: hidden;
 		position: relative;
 		background-color: #ccc;
@@ -137,22 +137,22 @@
 	}
 
 	.banner-title {
-		max-height: 84upx;
+		max-height: 42px;
 		overflow: hidden;
 		position: absolute;
-		left: 30upx;
-		bottom: 30upx;
+		left: 15px;
+		bottom: 15px;
 		width: 90%;
-		font-size: 32upx;
+		font-size: 16px;
 		font-weight: 400;
-		line-height: 42upx;
+		line-height: 21px;
 		color: white;
 		z-index: 11;
 	}
 
 	.uni-media-list-logo {
-		width: 180upx;
-		height: 140upx;
+		width: 90px;
+		height: 70px;
 	}
 
 	.uni-media-list-body {
@@ -161,8 +161,8 @@
 	}
 
 	.uni-media-list-text-top {
-		height: 74upx;
-		font-size: 28upx;
+		height: 37px;
+		font-size: 14px;
 		overflow: hidden;
 	}
 

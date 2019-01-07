@@ -58,13 +58,13 @@
 
 <style>
 	.uni-list{
-		margin-bottom: 30upx;
+		margin-bottom: 15px;
 	}
 	.uni-list-cell {
 		justify-content: flex-start
 	}
 	swiper{
-		height: 680upx;
+		height: 340px;
 		background:#f2f2f2;
 	}
 </style>

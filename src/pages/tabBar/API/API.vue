@@ -240,7 +240,7 @@
 			}
 		},
 		onNavigationBarButtonTap(e) {
-			uni.navigateTo({
+			Lemix.navigateTo({
 				// #ifdef APP-PLUS
 				url: '/platforms/app-plus/about/about',
 				// #endif
@@ -265,7 +265,7 @@
 			},
 			goDetailPage(e) {
 				let url = ~e.indexOf('platform') ? e : '/pages/API/' + e + '/' + e;
-				uni.navigateTo({
+				Lemix.navigateTo({
 					url: url
 				})
 			}

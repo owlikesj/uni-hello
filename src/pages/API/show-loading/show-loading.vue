@@ -18,12 +18,12 @@
 		},
 		methods: {
 			showLoading: function() {
-				uni.showLoading({
+				Lemix.showLoading({
 					title: 'loading'
 				});
 			},
 			hideLoading: function() {
-				uni.hideLoading();
+				Lemix.hideLoading();
 			}
 		}
 	}

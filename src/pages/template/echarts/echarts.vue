@@ -106,7 +106,7 @@
 				plus.runtime.openURL('https://github.com/F-loat/mpvue-echarts');
 				// #endif
 				// #ifdef MP-WEIXIN
-				uni.showModal({
+				Lemix.showModal({
 					content: '请复制链接在浏览器里打开',
 					showCancel: false
 				})
@@ -169,16 +169,16 @@
 	}
 
 	.page-section-title {
-		padding: 0 30upx;
+		padding: 0 15px;
 	}
 
 	.title {
-		margin-left: 30upx;
+		margin-left: 15px;
 		color: #8f8f94;
 	}
 
 	.container {
-		padding-bottom: 30upx;
+		padding-bottom: 15px;
 		box-sizing: border-box;
 	}
 
@@ -199,6 +199,6 @@
 	}
 
 	.update-btn {
-		margin-right: 30upx;
+		margin-right: 15px;
 	}
 </style>

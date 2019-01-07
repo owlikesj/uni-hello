@@ -80,6 +80,6 @@
 
 <style>
 	.uni-form-item .title {
-		padding: 20upx 0;
+		padding: 10px 0;
 	}
 </style>

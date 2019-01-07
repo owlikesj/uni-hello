@@ -71,7 +71,7 @@ var mdcontend = "很多资讯内容都是markdown格式，使用本模板可直�
 			navigate(href, e) {
 				// 如允许点击超链接跳转，则应该打开一个新页面，并传入href，由新页面内嵌webview组件负责显示该链接内容
 				console.log("href: " + href);
-				uni.showModal({
+				Lemix.showModal({
 					content : "点击链接为：" + href,
 					showCancel:false
 				})

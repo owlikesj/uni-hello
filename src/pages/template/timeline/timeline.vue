@@ -3,7 +3,7 @@
 		<page-head :title="title"></page-head>
 		<view class="">
 			<view class="uni-title uni-center">双栏时间轴</view>
-			<view class="uni-timeline" style="padding: 30upx 20upx;background-color: #fff;">
+			<view class="uni-timeline" style="padding: 15px 10px;background-color: #fff;">
 				<view class="uni-timeline-item uni-timeline-first-item">
 					<view class="uni-timeline-item-keynode">2018.05</view>
 					<view class="uni-timeline-item-divider"></view>
@@ -22,7 +22,7 @@
 			</view>
 
 			<view class="uni-title uni-center">单栏时间轴</view>
-			<view class="uni-timeline" style="padding: 30upx 20upx;background-color: #fff;">
+			<view class="uni-timeline" style="padding: 15px 10px;background-color: #fff;">
 				<view class="uni-timeline-item uni-timeline-first-item">
 					<view class="uni-timeline-item-divider"></view>
 					<view class="uni-timeline-item-content">

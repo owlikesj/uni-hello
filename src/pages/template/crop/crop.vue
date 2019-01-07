@@ -28,8 +28,8 @@
 				</view>
 			</view>
 			<view class='cropper-config'>
-				<button type="primary reverse" @click="getImage" style='margin-top: 30upx;'> 选择图片 </button>
-				<button type="warn" @click="getImageInfo" style='margin-top: 30upx;'> 点击生成图片 </button>
+				<button type="primary reverse" @click="getImage" style='margin-top: 15px;'> 选择图片 </button>
+				<button type="warn" @click="getImageInfo" style='margin-top: 15px;'> 点击生成图片 </button>
 			</view>
 			<canvas canvas-id="myCanvas" :style="'position:absolute;border: 1px solid red; width:'+imageW+'px;height:'+imageH+'px;top:-9999px;left:-9999px;'"></canvas>
 		</view>
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-	let sysInfo = uni.getSystemInfoSync();
+	let sysInfo = Lemix.getSystemInfoSync();
 	let SCREEN_WIDTH = sysInfo.screenWidth
 	let PAGE_X, // 手按下的x位置
 		PAGE_Y, // 手按下y的位置 
@@ -117,7 +117,7 @@
 			},
 			getImage: function () {
 				var _this = this
-				uni.chooseImage({
+				Lemix.chooseImage({
 					success: function (res) {
 						_this.setData({
 							imageSrc: res.tempFilePaths[0],
@@ -128,11 +128,11 @@
 			},
 			loadImage: function () {
 				var _this = this
-				uni.showLoading({
+				Lemix.showLoading({
 					title: '图片加载中...',
 				})
 
-				uni.getImageInfo({
+				Lemix.getImageInfo({
 					src: _this.imageSrc,
 					success: function success(res) {
 						IMG_RATIO = res.width / res.height
@@ -195,7 +195,7 @@
 						_this.setData({
 							isShowImg: true
 						})
-						uni.hideLoading()
+						Lemix.hideLoading()
 					}
 				})
 			},
@@ -240,11 +240,11 @@
 			// 获取图片
 			getImageInfo() {
 				var _this = this;
-				uni.showLoading({
+				Lemix.showLoading({
 					title: '图片生成中...',
 				});
 				// 将图片写入画布
-				const ctx = uni.createCanvasContext('myCanvas');
+				const ctx = Lemix.createCanvasContext('myCanvas');
 				ctx.drawImage(_this.imageSrc, 0, 0, IMG_REAL_W, IMG_REAL_H);
 				ctx.draw(true, () => {
 					// 获取画布要裁剪的位置和宽度   均为百分比 * 画布中图片的宽度    保证了在微信小程序中裁剪的图片模糊  位置不对的问题 canvasT = (_this.cutT / _this.cropperH) * (_this.imageH / pixelRatio)
@@ -252,7 +252,7 @@
 					var canvasH = ((_this.cropperH - _this.cutT - _this.cutB) / _this.cropperH) * IMG_REAL_H;
 					var canvasL = (_this.cutL / _this.cropperW) * IMG_REAL_W;
 					var canvasT = (_this.cutT / _this.cropperH) * IMG_REAL_H;
-					uni.canvasToTempFilePath({
+					Lemix.canvasToTempFilePath({
 						x: canvasL,
 						y: canvasT,
 						width: canvasW,
@@ -262,9 +262,9 @@
 						quality: 0.5,
 						canvasId: 'myCanvas',
 						success: function (res) {
-							uni.hideLoading()
+							Lemix.hideLoading()
 							// 成功获得地址的地方
-							uni.previewImage({
+							Lemix.previewImage({
 								current: '', // 当前显示图片的http链接
 								urls: [res.tempFilePath] // 需要预览的图片http链接列表
 							})
@@ -355,11 +355,11 @@
 	}
 
 	.cropper-config {
-		padding: 20upx 40upx;
+		padding: 10px 20px;
 	}
 
 	.cropper-content {
-		min-height: 750upx;
+		min-height: 375px;
 		width: 100%;
 	}
 
@@ -416,7 +416,7 @@
 		width: 100%;
 		height: 100%;
 		overflow: visible;
-		outline: 1upx solid #69f;
+		outline: 0.5px solid #69f;
 		outline-color: rgba(102, 153, 255, .75)
 	}
 	/* 横向虚线 */
@@ -427,8 +427,8 @@
 		left: 0;
 		width: 100%;
 		height: 33.33333333%;
-		border-top: 1upx dashed rgba(255, 255, 255, 0.5);
-		border-bottom: 1upx dashed rgba(255, 255, 255, 0.5);
+		border-top: 0.5px dashed rgba(255, 255, 255, 0.5);
+		border-bottom: 0.5px dashed rgba(255, 255, 255, 0.5);
 	}
 	/* 纵向虚线 */
 
@@ -438,8 +438,8 @@
 		top: 0;
 		width: 33.33333333%;
 		height: 100%;
-		border-left: 1upx dashed rgba(255, 255, 255, 0.5);
-		border-right: 1upx dashed rgba(255, 255, 255, 0.5);
+		border-left: 0.5px dashed rgba(255, 255, 255, 0.5);
+		border-right: 0.5px dashed rgba(255, 255, 255, 0.5);
 	}
 	/* 四个方向的线  为了之后的拖动事件*/
 
@@ -450,7 +450,7 @@
 		background-color: #69f;
 		top: 0;
 		left: 0;
-		height: 1upx;
+		height: 0.5px;
 		opacity: 0.1;
 		cursor: n-resize;
 	}
@@ -459,12 +459,12 @@
 		content: '';
 		position: absolute;
 		top: 50%;
-		right: 0upx;
+		right: 0px;
 		width: 100%;
 		-webkit-transform: translate3d(0, -50%, 0);
 		transform: translate3d(0, -50%, 0);
 		bottom: 0;
-		height: 41upx;
+		height: 20.5px;
 		background: transparent;
 		z-index: 11;
 	}
@@ -474,8 +474,8 @@
 		display: block;
 		background-color: #69f;
 		top: 0;
-		right: 0upx;
-		width: 1upx;
+		right: 0px;
+		width: 0.5px;
 		opacity: 0.1;
 		height: 100%;
 		cursor: e-resize;
@@ -486,7 +486,7 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-		width: 41upx;
+		width: 20.5px;
 		-webkit-transform: translate3d(-50%, 0, 0);
 		transform: translate3d(-50%, 0, 0);
 		bottom: 0;
@@ -502,7 +502,7 @@
 		background-color: #69f;
 		bottom: 0;
 		left: 0;
-		height: 1upx;
+		height: 0.5px;
 		opacity: 0.1;
 		cursor: s-resize;
 	}
@@ -511,12 +511,12 @@
 		content: '';
 		position: absolute;
 		top: 50%;
-		right: 0upx;
+		right: 0px;
 		width: 100%;
 		-webkit-transform: translate3d(0, -50%, 0);
 		transform: translate3d(0, -50%, 0);
 		bottom: 0;
-		height: 41upx;
+		height: 20.5px;
 		background: transparent;
 		z-index: 11;
 	}
@@ -527,7 +527,7 @@
 		background-color: #69f;
 		top: 0;
 		left: 0;
-		width: 1upx;
+		width: 0.5px;
 		opacity: 0.1;
 		height: 100%;
 		cursor: w-resize;
@@ -538,7 +538,7 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-		width: 41upx;
+		width: 20.5px;
 		-webkit-transform: translate3d(-50%, 0, 0);
 		transform: translate3d(-50%, 0, 0);
 		bottom: 0;
@@ -548,8 +548,8 @@
 	}
 
 	.uni-cropper-point {
-		width: 5upx;
-		height: 5upx;
+		width: 2.5px;
+		height: 2.5px;
 		background-color: #69f;
 		opacity: .75;
 		position: absolute;
@@ -557,24 +557,24 @@
 	}
 
 	.point-t {
-		top: -3upx;
+		top: -1.5px;
 		left: 50%;
-		margin-left: -3upx;
+		margin-left: -1.5px;
 		cursor: n-resize;
 	}
 
 	.point-tr {
-		top: -3upx;
+		top: -1.5px;
 		left: 100%;
-		margin-left: -3upx;
+		margin-left: -1.5px;
 		cursor: n-resize;
 	}
 
 	.point-r {
 		top: 50%;
 		left: 100%;
-		margin-left: -3upx;
-		margin-top: -3upx;
+		margin-left: -1.5px;
+		margin-top: -1.5px;
 		cursor: n-resize;
 	}
 
@@ -584,8 +584,8 @@
 		-webkit-transform: translate3d(-50%, -50%, 0);
 		transform: translate3d(-50%, -50%, 0);
 		cursor: n-resize;
-		width: 36upx;
-		height: 36upx;
+		width: 18px;
+		height: 18px;
 		background-color: #69f;
 		position: absolute;
 		z-index: 1112;
@@ -595,32 +595,32 @@
 	.point-b {
 		left: 50%;
 		top: 100%;
-		margin-left: -3upx;
-		margin-top: -3upx;
+		margin-left: -1.5px;
+		margin-top: -1.5px;
 		cursor: n-resize;
 	}
 
 	.point-bl {
 		left: 0%;
 		top: 100%;
-		margin-left: -3upx;
-		margin-top: -3upx;
+		margin-left: -1.5px;
+		margin-top: -1.5px;
 		cursor: n-resize;
 	}
 
 	.point-l {
 		left: 0%;
 		top: 50%;
-		margin-left: -3upx;
-		margin-top: -3upx;
+		margin-left: -1.5px;
+		margin-top: -1.5px;
 		cursor: n-resize;
 	}
 
 	.point-lt {
 		left: 0%;
 		top: 0%;
-		margin-left: -3upx;
-		margin-top: -3upx;
+		margin-left: -1.5px;
+		margin-top: -1.5px;
 		cursor: n-resize;
 	}
 	/* 裁剪框预览内容 */

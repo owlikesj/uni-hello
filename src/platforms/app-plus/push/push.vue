@@ -29,7 +29,7 @@
 			}
 		},
 		onLoad: function () {
-			uni.getProvider({
+			Lemix.getProvider({
 				service: "push",
 				success: (e) => {
 					console.log("success", e);
@@ -45,35 +45,35 @@
 		},
 		methods: {
 			openPush() {
-				uni.subscribePush({
+				Lemix.subscribePush({
 					provider: this.provider[0],
 					success: (e) => {
-						uni.showToast({
+						Lemix.showToast({
 							title: "已开启push接收"
 						})
 					}
 				})
 			},
 			closePush() {
-				uni.unsubscribePush({
+				Lemix.unsubscribePush({
 					provider: this.provider[0],
 					success: (e) => {
-						uni.showToast({
+						Lemix.showToast({
 							title: "已关闭push接收"
 						})
 					}
 				})
 			},
 			listenTranMsg() {
-				uni.onPush({
+				Lemix.onPush({
 					provider: this.provider[0],
 					success: (e) => {
-						uni.showToast({
+						Lemix.showToast({
 							title: "开始监听透传数据"
 						})
 					},
 					callback: (e) => {
-						uni.showToast({
+						Lemix.showToast({
 							title: "接收到透传数据"
 						});
 						
@@ -82,11 +82,11 @@
 				})
 			},
 			removeTranMsg() {
-				uni.offPush({
+				Lemix.offPush({
 					provider: this.provider[0],
 					success: (e) => {
 						console.log("移除监听透传数据");
-						uni.showToast({
+						Lemix.showToast({
 							title: "移除监听透传数据"
 						})
 					}

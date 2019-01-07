@@ -59,7 +59,7 @@
 		},
 		onLoad: function () {
 			this.getCategory();
-			this.height = uni.getSystemInfoSync().windowHeight;
+			this.height = Lemix.getSystemInfoSync().windowHeight;
 		}
 	}
 </script>
@@ -79,10 +79,10 @@
 	}
 
 	.nav-left-item {
-		height: 100upx;
+		height: 50px;
 		border-right: solid 1px #E0E0E0;
 		border-bottom: solid 1px #E0E0E0;
-		font-size: 30upx;
+		font-size: 15px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -94,16 +94,16 @@
 
 	.nav-right-item {
 		width: 28%;
-		height: 220upx;
+		height: 110px;
 		float: left;
 		text-align: center;
-		padding: 11upx;
-		font-size: 28upx;
+		padding: 5.5px;
+		font-size: 14px;
 	}
 
 	.nav-right-item image {
-		width: 100upx;
-		height: 100upx;
+		width: 50px;
+		height: 50px;
 	}
 
 	.active {

@@ -45,7 +45,7 @@
 			}
 		},
 		onLoad() {
-			let winHeight = uni.getSystemInfoSync().windowHeight;
+			let winHeight = Lemix.getSystemInfoSync().windowHeight;
 			this.itemHeight = winHeight / 26;
 			this.winHeight = winHeight;
 		},
@@ -93,7 +93,7 @@
 	}
 
 	.uni-indexed-list-bar {
-		width: 46upx;
+		width: 23px;
 		height: 100vh;
 		background-color: lightgrey;
 		display: flex;
@@ -106,7 +106,7 @@
 
 	.uni-indexed-list-text {
 		color: #aaa;
-		font-size: 22upx;
+		font-size: 11px;
 		text-align: center;
 	}
 
@@ -122,16 +122,16 @@
 	.uni-indexed-list-alert {
 		position: absolute;
 		z-index: 20;
-		width: 160upx;
-		height: 160upx;
+		width: 80px;
+		height: 80px;
 		left: 50%;
 		top: 50%;
-		margin-left: -80upx;
-		margin-top: -80upx;
-		border-radius: 80upx;
+		margin-left: -40px;
+		margin-top: -40px;
+		border-radius: 40px;
 		text-align: center;
-		line-height: 160upx;
-		font-size: 70upx;
+		line-height: 80px;
+		font-size: 35px;
 		color: #fff;
 		background-color: rgba(0, 0, 0, 0.5);
 	}

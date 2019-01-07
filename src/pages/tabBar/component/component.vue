@@ -1,7 +1,7 @@
 <template>
 	<view class="uni-padding-wrap uni-common-pb">
 		<view class="uni-header-logo">
-			<image src="../../../static/componentIndex.png"></image>
+			<img src="../../../static/componentIndex.png">
 		</view>
 		<view class="uni-hello-text uni-common-pb">
 			以下将展示uni-app官方组件能力，组件样式仅供参考，开发者可根据自身需求自定义组件样式，具体属性参数详见uni-app开发文档。
@@ -82,22 +82,22 @@
 			}
 		},
 		onLoad() {
-			// #ifdef APP-PLUS 
-			// web-view组件支持本地html，依赖最新版的客户端基座
-			var innerversion = plus.runtime.innerVersion;
-			var _v = innerversion.substring(innerversion.lastIndexOf('.') + 1, innerversion.length);
-			if (_v && parseInt(_v) >= 53650) {
+			// // #ifdef APP-PLUS 
+			// // web-view组件支持本地html，依赖最新版的客户端基座
+			// var innerversion = plus.runtime.innerVersion;
+			// var _v = innerversion.substring(innerversion.lastIndexOf('.') + 1, innerversion.length);
+			// if (_v && parseInt(_v) >= 53650) {
 
-				var newPages = [{
-					name: '网络网页',
-					url: '/pages/component/web-view/web-view'
-				}, {
-					name: '本地网页',
-					url: '/platforms/app-plus/web-view-local/web-view-local'
-				}];
-				this.lists[this.lists.length - 1].pages = newPages;
-			}
-			// #endif
+			// 	var newPages = [{
+			// 		name: '网络网页',
+			// 		url: '/pages/component/web-view/web-view'
+			// 	}, {
+			// 		name: '本地网页',
+			// 		url: '/platforms/app-plus/web-view-local/web-view-local'
+			// 	}];
+			// 	this.lists[this.lists.length - 1].pages = newPages;
+			// }
+			// // #endif
 		},
 		onShareAppMessage() {
 			return {
@@ -106,7 +106,7 @@
 			}
 		},
 		onNavigationBarButtonTap(e) {
-			uni.navigateTo({
+			Lemix.navigateTo({
 				// #ifdef APP-PLUS
 				url: '/platforms/app-plus/about/about',
 				// #endif
@@ -131,11 +131,11 @@
 			},
 			goDetailPage(e) {
 				if (typeof e === 'string') {
-					uni.navigateTo({
+					Lemix.navigateTo({
 						url: '/pages/component/' + e + '/' + e
 					})
 				} else {
-					uni.navigateTo({
+					Lemix.navigateTo({
 						url: e.url
 					})
 				}

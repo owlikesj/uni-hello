@@ -25,7 +25,7 @@
 				</label>
 			</radio-group>
 		</view>
-		<view style="height: 1000upx;"></view>
+		<view style="height: 500px;"></view>
 	</view>
 </template>
 
@@ -64,10 +64,10 @@
 	image,
 	swiper,
 	.img-view {
-		width: 750upx;
-		height: 500upx;
+		width: 375px;
+		height: 250px;
 	}
 	.page-section-title{
-		margin-top: 50upx;
+		margin-top: 25px;
 	}
 </style>

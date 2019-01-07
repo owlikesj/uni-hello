@@ -26,7 +26,7 @@
 		},
 		methods: {
 			scan: function() {
-				uni.scanCode({
+				Lemix.scanCode({
 					success: (res) => {
 						this.result = res.result
 					}
@@ -38,7 +38,7 @@
 
 <style>
 	.scan-result {
-		min-height: 50upx;
-		line-height: 50upx;
+		min-height: 25px;
+		line-height: 25px;
 	}
 </style>

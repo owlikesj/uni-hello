@@ -7,7 +7,7 @@
 				<textarea class="textarea" v-model="shareText" />
 				</view>
 			<view class="uni-title">分享图片：</view>
-			<view class="uni-uploader" style="padding:15upx; background:#FFF;">
+			<view class="uni-uploader" style="padding:7.5px; background:#FFF;">
 				<view class="uni-uploader__input-box" v-if="!image" @tap="chooseImage"></view>
 				<image class="uni-uploader__img" v-if="image" :src="image"></image>
 			</view>
@@ -68,7 +68,7 @@
 			this.image='';
 		},
 		onLoad: function () {
-			uni.getProvider({
+			Lemix.getProvider({
 				service: 'share',
 				success: (e) => {
 					console.log('success', e);
@@ -112,7 +112,7 @@
 				},
 				fail: (e) => {
 					console.log('获取登录通道失败', e);
-					uni.showModal({
+					Lemix.showModal({
 						content:'获取登录通道失败',
 						showCancel:false
 					})
@@ -124,7 +124,7 @@
 				console.log('分享通道:'+ e.id +'； 分享类型:' + this.shareType);
 				
 				if(!this.shareText && (this.shareType === 1 || this.shareType === 0)){
-					uni.showModal({
+					Lemix.showModal({
 						content:'分享内容不能为空',
 						showCancel:false
 					})
@@ -132,7 +132,7 @@
 				}
 				
 				if(!this.image && (this.shareType === 2 || this.shareType === 0)){
-					uni.showModal({
+					Lemix.showModal({
 						content:'分享图片不能为空',
 						showCancel:false
 					})
@@ -145,14 +145,14 @@
 					type: this.shareType,
 					success: (e) => {
 						console.log('success', e);
-						uni.showModal({
+						Lemix.showModal({
 							content: '分享成功',
 							showCancel:false
 						})
 					},
 					fail: (e) => {
 						console.log('fail', e)
-						uni.showModal({
+						Lemix.showModal({
 							content: e.errMsg,
 							showCancel:false
 						})
@@ -196,14 +196,14 @@
 					shareOPtions.href = 'http://uniapp.dcloud.io';
 					shareOPtions.title = '欢迎体验uniapp';
 				}
-				uni.share(shareOPtions);
+				Lemix.share(shareOPtions);
 			},
 			radioChange(e){
 				console.log('type:' + e.detail.value);
 				this.shareType = parseInt(e.detail.value);
 			},
 			chooseImage() {
-				uni.chooseImage({
+				Lemix.chooseImage({
 					count: 1,
 					sourceType: ['album', 'camera'],
 					sizeType: ['compressed', 'original'],
@@ -235,7 +235,7 @@
 									let newImg = img.replace('.jpg', '2222.jpg').replace('.JPG', '2222.JPG');
 									res(newImg);
 								}, function(error) {
-									uni.showModal({
+									Lemix.showModal({
 										content:'分享图片太大,需要请重新选择图片!',
 										showCancel:false
 									})
@@ -244,7 +244,7 @@
 						});
 					}, (e) => {
 						console.log('Resolve file URL failed: ' + e.message);
-						uni.showModal({
+						Lemix.showModal({
 							content:'分享图片太大,需要请重新选择图片!',
 							showCancel:false
 						})

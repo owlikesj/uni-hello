@@ -32,7 +32,7 @@ const store = new Vuex.Store({
 				if (state.openid) {
 					resolve(state.openid)
 				} else {
-					uni.login({
+					Lemix.login({
 						success: (data) => {
 							commit('login')
 							setTimeout(function () { //模拟异步请求服务器获取 openid

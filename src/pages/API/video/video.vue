@@ -48,7 +48,7 @@
 				this.sourceTypeIndex = e.target.value
 			},
 			chooseVideo: function () {
-				uni.chooseVideo({
+				Lemix.chooseVideo({
 					sourceType: sourceType[this.sourceTypeIndex],
 					success: (res) => {
 						this.src = res.tempFilePath

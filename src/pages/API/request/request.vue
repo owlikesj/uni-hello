@@ -28,7 +28,7 @@
 		methods: {
 			sendRequest: function() {
 				this.loading = true
-				uni.request({
+				Lemix.request({
 					url: requestUrl,
 					dataType: 'text',
 					data: {
@@ -36,7 +36,7 @@
 					},
 					success: (res) => {
 						console.log('request success', res)
-						uni.showToast({
+						Lemix.showToast({
 							title: '请求成功',
 							icon: 'success',
 							mask: true,
@@ -46,7 +46,7 @@
 					},
 					fail: (err) => {
 						console.log('request fail', err);
-						uni.showModal({
+						Lemix.showModal({
 							content: err.errMsg,
 							showCancel: false
 						});

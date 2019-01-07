@@ -33,7 +33,7 @@
 </script>
 <style>
 	.image {
-		margin:40upx 0;
-		width: 200upx;
+		margin:20px 0;
+		width: 100px;
 	}
 </style>

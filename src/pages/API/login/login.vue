@@ -2,7 +2,7 @@
 	<view>
 		<page-head :title="title"></page-head>
 		<view class="uni-padding-wrap">
-			<view style="background:#FFF; padding:40upx;">
+			<view style="background:#FFF; padding:20px;">
 				<block v-if="hasLogin === true">
 					<view class="uni-h3 uni-center uni-common-mt">已登录</view>
 					<view class="uni-hello-text uni-center">
@@ -39,7 +39,7 @@
 			...mapState(['hasLogin'])
 		},
 		onLoad() {
-			uni.getProvider({
+			Lemix.getProvider({
 				service: 'oauth',
 				success: (e) => {
 					console.log('oauth..........');
@@ -79,7 +79,7 @@
 		methods: {
 			...mapMutations(['login']),
 			tologin(provider) {
-				uni.login({
+				Lemix.login({
 					provider: provider.id,
 					success: (res) => {
 						console.log('login success:', res);

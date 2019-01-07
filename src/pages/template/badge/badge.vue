@@ -5,7 +5,7 @@
 			<view class="uni-title">
 				有底色
 			</view>
-			<view style="background:#FFF; padding:20upx;">
+			<view style="background:#FFF; padding:10px;">
 				<uni-badge text="1"></uni-badge>
 				<uni-badge text="12" type="primary"></uni-badge>
 				<uni-badge text="123" type="success"></uni-badge>
@@ -16,7 +16,7 @@
 			<view class="uni-title uni-common-mt">
 				无底色
 			</view>
-			<view style="background:#FFF; padding:20upx;">
+			<view style="background:#FFF; padding:10px;">
 				<uni-badge text="1" :inverted="true"></uni-badge>
 				<uni-badge text="12" type="primary" :inverted="true"></uni-badge>
 				<uni-badge text="123" type="success" :inverted="true"></uni-badge>
@@ -43,5 +43,5 @@
 </script>
 
 <style>
-	.uni-badge{margin: 20upx;}
+	.uni-badge{margin: 10px;}
 </style>

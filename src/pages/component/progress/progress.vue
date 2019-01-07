@@ -35,10 +35,10 @@
 <style>
 	.progress-box {
 		display: flex;
-		height: 50upx;
-		margin-bottom: 60upx;
+		height: 25px;
+		margin-bottom: 30px;
 	}
 	.progress-cancel {
-		margin-left: 40upx;
+		margin-left: 20px;
 	}
 </style>

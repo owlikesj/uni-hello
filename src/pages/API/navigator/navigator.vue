@@ -21,25 +21,25 @@
 		},
 		methods: {
 			navigateTo() {
-				uni.navigateTo({
+				Lemix.navigateTo({
 					url: 'new-page/new-page?data=Hello'
 				})
 			},
 			navigateBack() {
-				uni.navigateBack();
+				Lemix.navigateBack();
 			},
 			redirectTo() {
-				uni.redirectTo({
+				Lemix.redirectTo({
 					url: 'new-page/new-page'
 				});
 			},
 			switchTab() {
-				uni.switchTab({
+				Lemix.switchTab({
 					url: '/pages/tabBar/template/template'
 				});
 			},
 			reLaunch() {
-				uni.reLaunch({
+				Lemix.reLaunch({
 					url: '/pages/tabBar/component/component'
 				});
 			}

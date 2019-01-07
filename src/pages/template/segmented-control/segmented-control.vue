@@ -112,12 +112,12 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 300upx;
+		height: 150px;
 		text-align: center;
 	}
 
 	.color-tag {
-		width: 50upx;
-		height: 50upx;
+		width: 25px;
+		height: 25px;
 	}
 </style>

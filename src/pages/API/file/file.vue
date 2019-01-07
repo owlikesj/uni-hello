@@ -31,11 +31,11 @@
 			}
 		},
 		onLoad() {
-			this.savedFilePath = uni.getStorageSync('savedFilePath');
+			this.savedFilePath = Lemix.getStorageSync('savedFilePath');
 		},
 		methods: {
 			chooseImage() {
-				uni.chooseImage({
+				Lemix.chooseImage({
 					count: 1,
 					success: (res) => {
 						this.tempFilePath = res.tempFilePaths[0]
@@ -44,19 +44,19 @@
 			},
 			saveFile() {
 				if (this.tempFilePath.length > 0) {
-					uni.saveFile({
+					Lemix.saveFile({
 						tempFilePath: this.tempFilePath,
 						success: (res) => {
 							this.savedFilePath = res.savedFilePath
-							uni.setStorageSync('savedFilePath', res.savedFilePath)
-							uni.showModal({
+							Lemix.setStorageSync('savedFilePath', res.savedFilePath)
+							Lemix.showModal({
 								title: '保存成功',
 								content: '下次进入页面时，此文件仍可用',
 								showCancel: false
 							})
 						},
 						fail: (res) => {
-							uni.showModal({
+							Lemix.showModal({
 								title: '保存失败',
 								content: '失败原因: ' + JSON.stringify(res),
 								showCancel: false
@@ -64,23 +64,23 @@
 						}
 					})
 				} else {
-					uni.showModal({
+					Lemix.showModal({
 						content: "请选择文件",
 						showCancel: false
 					})
 				}
 			},
 			clear() {
-				uni.setStorageSync('savedFilePath', '')
+				Lemix.setStorageSync('savedFilePath', '')
 				this.tempFilePath = '',
 					this.savedFilePath = ''
 			},
 			openDocument() {
-				uni.downloadFile({
+				Lemix.downloadFile({
 					url: 'https://raw.githubusercontent.com/mozilla/pdf.js/master/examples/learning/helloworld.pdf',
 					success: function(res) {
 						var filePath = res.tempFilePath
-						uni.openDocument({
+						Lemix.openDocument({
 							filePath: filePath,
 							success: function(res) {
 								console.log('打开文档成功')
@@ -96,7 +96,7 @@
 <style>
 	.image {
 		width: 100%;
-		height: 360upx;
+		height: 180px;
 	}
 
 	.btn-savefile {

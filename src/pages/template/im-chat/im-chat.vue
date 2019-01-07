@@ -41,9 +41,9 @@
 			messageShow
 		},
 		onLoad: function () {
-			const res = uni.getSystemInfoSync();
+			const res = Lemix.getSystemInfoSync();
 			this.style.pageHeight = res.windowHeight;
-			this.style.contentViewHeight = res.windowHeight - uni.getSystemInfoSync().screenWidth / 750 * (100); //像素
+			this.style.contentViewHeight = res.windowHeight - Lemix.getSystemInfoSync().screenWidth / 750 * (100); //像素
 		},
 		methods: {
 			getInputMessage: function (message) { //获取子组件的输入数据
@@ -62,7 +62,7 @@
 			},
 			scrollToBottom: function () {
 				var that = this;
-				var query = uni.createSelectorQuery();
+				var query = Lemix.createSelectorQuery();
 				query.selectAll('.m-item').boundingClientRect();
 				query.select('#scrollview').boundingClientRect();
 
@@ -82,7 +82,7 @@
 
 				// this.addMessage('home', info, false);
 				var apiUrl = 'http://www.tuling123.com/openapi/api';
-				uni.request({
+				Lemix.request({
 					url: apiUrl,
 					data: {
 						"key": 'acfbca724ea1b5db96d2eef88ce677dc',
@@ -97,7 +97,7 @@
 					},
 					fail: (err) => {
 						console.log('request fail', err);
-						uni.showModal({
+						Lemix.showModal({
 							content: err.errMsg,
 							showCancel: false
 						})
@@ -118,16 +118,16 @@
 
 		display: flex;
 		flex: 1;
-		margin-bottom: 100upx;
+		margin-bottom: 50px;
 	}
 
 	.foot {
 		position: fixed;
 		width: 100%;
-		height: 90upx;
-		min-height: 90upx;
-		left: 0upx;
-		bottom: 0upx;
+		height: 45px;
+		min-height: 45px;
+		left: 0px;
+		bottom: 0px;
 		overflow: hidden;
 	}
 </style>

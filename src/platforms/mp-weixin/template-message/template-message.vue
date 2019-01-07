@@ -75,7 +75,7 @@
 				try {
 					const openid = await this.getUserOpenId()
 					console.log('openid:::::' + openid)
-					uni.request({
+					Lemix.request({
 						url: templateMessageUrl,
 						method: 'POST',
 						data: {
@@ -85,7 +85,7 @@
 						},
 						success: (res) => {
 							console.log('submit form success', res)
-							uni.showToast({
+							Lemix.showToast({
 								title: '发送成功',
 								icon: 'success'
 							})

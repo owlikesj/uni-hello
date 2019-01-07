@@ -93,6 +93,6 @@
 
 <style>
 .title {
-	padding: 20upx;
+	padding: 10px;
 }
 </style>

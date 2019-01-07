@@ -53,37 +53,37 @@
 		},
 		methods: {
 			back() {
-				uni.navigateBack({
+				Lemix.navigateBack({
 					delta: 1
 				})
 			},
 			showMenu() {
-				uni.showToast({
+				Lemix.showToast({
 					title: '菜单'
 				})
 			},
 			clickLeft() {
-				uni.showToast({
+				Lemix.showToast({
 					title: '左侧按钮'
 				})
 			},
 			search() {
-				uni.showToast({
+				Lemix.showToast({
 					title: '搜索'
 				})
 			},
 			showCity() {
-				uni.showToast({
+				Lemix.showToast({
 					title: '选择城市'
 				})
 			},
 			scan() {
-				uni.showToast({
+				Lemix.showToast({
 					title: '扫码'
 				})
 			},
 			confirm() {
-				uni.showToast({
+				Lemix.showToast({
 					title: '搜索'
 				})
 			}
@@ -91,7 +91,7 @@
 		onPullDownRefresh() {
 			console.log('onPullDownRefresh')
 			setTimeout(function() {
-				uni.stopPullDownRefresh()
+				Lemix.stopPullDownRefresh()
 				console.log('stopPullDownRefresh')
 			}, 1000)
 		}

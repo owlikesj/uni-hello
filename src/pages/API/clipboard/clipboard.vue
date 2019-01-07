@@ -28,17 +28,17 @@
 				this.data = e.target.value
 			},
 			getClipboard: function () {
-				uni.getClipboardData({
+				Lemix.getClipboardData({
 					success: (res) => {
 						console.log(res.data);
-						uni.showModal({
+						Lemix.showModal({
 							title: '读取剪贴板',
 							content: '剪贴板内容为: ' + res.data,
 							showCancel: false
 						})
 					},
 					fail: () => {
-						uni.showModal({
+						Lemix.showModal({
 							content: '读取剪贴板失败!',
 							showCancel: false
 						})
@@ -48,22 +48,22 @@
 			setClipboard: function () {
 				var data = this.data;
 				if (data.length === 0) {
-					uni.showModal({
+					Lemix.showModal({
 						title: '设置剪贴板失败',
 						content: '内容不能为空',
 						showCancel: false
 					})
 				} else {
-					uni.setClipboardData({
+					Lemix.setClipboardData({
 						data: data,
 						success: () => {
-							uni.showModal({
+							Lemix.showModal({
 								content: '设置剪贴板成功',
 								showCancel: false
 							})
 						},
 						fail: () => {
-							uni.showModal({
+							Lemix.showModal({
 								content: '储存数据失败!',
 								showCancel: false
 							})

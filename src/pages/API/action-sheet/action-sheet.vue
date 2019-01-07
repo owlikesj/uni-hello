@@ -17,11 +17,11 @@
 		},
 		methods: {
 			actionSheetTap() {
-				uni.showActionSheet({
+				Lemix.showActionSheet({
 					itemList: ['item1', 'item2', 'item3', 'item4'],
 					success: (e) => {
 						console.log(e.tapIndex);
-						uni.showToast({
+						Lemix.showToast({
 							title:"点击了第" + e.tapIndex + "个选项",
 							icon:"none"
 						})

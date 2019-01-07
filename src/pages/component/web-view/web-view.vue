@@ -18,7 +18,7 @@
 		},
 		methods: {
 			getMessage(event) {
-				uni.showModal({
+				Lemix.showModal({
 					content: JSON.stringify(event.detail),
 					showCancel: false
 				});

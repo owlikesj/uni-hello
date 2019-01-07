@@ -2,7 +2,7 @@
 	<view>
 		<page-head :title="title"></page-head>
 		<view class="uni-padding-wrap">
-			<view style="background:#FFF; padding:40upx;">
+			<view style="background:#FFF; padding:20px;">
 				<block v-if="hasUserInfo === false">
 					<view class="uni-hello-text uni-center">
 						<text>请点击下方按钮获取用户头像及昵称</text>
@@ -10,7 +10,7 @@
 				</block>
 				<block v-if="hasUserInfo === true">
 					<view class="uni-h4 uni-center uni-common-mt">{{userInfo.nickName}}</view>
-					<view style="padding:30upx 0; text-align:center;">
+					<view style="padding:15px 0; text-align:center;">
 						<image class="userinfo-avatar" :src="userInfo.avatarUrl"></image>
 					</view>
 				</block>
@@ -49,7 +49,7 @@
 		methods: {
 			// 获取用户信息 API 在小程序可直接使用，在 5+App 里面需要先登录才能调用
 			getUserInfo() {
-				uni.getUserInfo({
+				Lemix.getUserInfo({
 					provider: this.loginProvider,
 					success: (result) => {
 						console.log('getUserInfo success', result);
@@ -62,7 +62,7 @@
 						if (~content.indexOf('uni.login')) {
 							content = '请在登录页面完成登录操作';
 						}
-						uni.showModal({
+						Lemix.showModal({
 							title: '获取用户信息失败',
 							content: '错误原因' + content,
 							showCancel: false
@@ -73,7 +73,7 @@
 			mpGetUserInfo(result) {
 				console.log('mpGetUserInfo', result);
 				if (result.detail.errMsg !== 'getUserInfo:ok') {
-					uni.showModal({
+					Lemix.showModal({
 						title: '获取用户信息失败',
 						content: '错误原因' + result.detail.errMsg,
 						showCancel: false
@@ -93,8 +93,8 @@
 
 <style>
 	.userinfo-avatar {
-		border-radius: 128upx;
-		width: 128upx;
-		height: 128upx;
+		border-radius: 64px;
+		width: 64px;
+		height: 64px;
 	}
 </style>

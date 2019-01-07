@@ -8,7 +8,7 @@
 		</view>
 		<!-- 示例2：绿底白字 -->
 		<view class="uni-text-small uni-center title" >示例2</view>
-		<view style="background:#00B26A; padding:50upx 0;">
+		<view style="background:#00B26A; padding:25px 0;">
 			<uni-countdown :timer="timer2" borderColor="#FFFFFF" splitorColor="#FFF" fontColor="#FFFFFF" bgrColor="none"></uni-countdown>
 		</view>
 		<!-- 示例3：黑底白字 -->
@@ -66,7 +66,7 @@
 	}
 	
 	.title{
-		margin:80upx 0 20upx 0;
+		margin:40px 0 10px 0;
 	}
 	
 </style>

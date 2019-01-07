@@ -73,7 +73,7 @@
 		},
 		methods: {
 			getSystemInfo: function () {
-				uni.getSystemInfo({
+				Lemix.getSystemInfo({
 					success: (res) => {
 						this.systemInfo = res
 					}
@@ -85,6 +85,6 @@
 
 <style>
 	.uni-pd {
-		padding-left: 30upx;
+		padding-left: 15px;
 	}
 </style>

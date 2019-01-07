@@ -50,23 +50,23 @@
 				var key = this.key,
 					data = this.data;
 				if (key.length === 0) {
-					uni.showModal({
+					Lemix.showModal({
 						title: '读取数据失败',
 						content: "key 不能为空",
 						showCancel:false
 					})
 				} else {
-					uni.getStorage({
+					Lemix.getStorage({
 						key: key,
 						success: (res) => {
-							uni.showModal({
+							Lemix.showModal({
 								title: '读取数据成功',
 								content: "data: '" + res.data + "'",
 								showCancel:false
 							})
 						},
 						fail: () => {
-							uni.showModal({
+							Lemix.showModal({
 								title: '读取数据失败',
 								content: "找不到 key 对应的数据",
 								showCancel:false
@@ -79,24 +79,24 @@
 				var key = this.key
 				var data = this.data
 				if (key.length === 0) {
-					uni.showModal({
+					Lemix.showModal({
 						title: '保存数据失败',
 						content: 'key 不能为空',
 						showCancel:false
 					})
 				} else {
-					uni.setStorage({
+					Lemix.setStorage({
 						key: key,
 						data: data,
 						success: (res) => {
-							uni.showModal({
+							Lemix.showModal({
 								title: '存储数据成功',
 								content: ' ',
 								showCancel:false
 							})
 						},
 						fail: () => {
-							uni.showModal({
+							Lemix.showModal({
 								title: '储存数据失败!',
 								showCancel:false
 							})
@@ -105,10 +105,10 @@
 				}
 			},
 			clearStorage: function () {
-				uni.clearStorageSync()
+				Lemix.clearStorageSync()
 				this.key = '',
 					this.data = ''
-				uni.showModal({
+				Lemix.showModal({
 					title: '清除数据成功',
 					content: ' ',
 					showCancel:false

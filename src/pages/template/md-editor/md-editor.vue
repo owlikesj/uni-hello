@@ -35,33 +35,33 @@
 	}
 
 	.input-content textarea {
-		padding: 16upx 25upx 15upx 25upx;
-		font-size: 30upx;
-		min-height: 500upx;
+		padding: 8px 12.5px 7.5px 12.5px;
+		font-size: 15px;
+		min-height: 250px;
 		line-height: 1.5;
 	}
 
 	.preview {
-		border-top: 1upx solid #e0e0e0;
+		border-top: 0.5px solid #e0e0e0;
 		width: 100%;
 	}
 
 	.toolbar {
 		width: 100%;
 		border: none;
-		box-shadow: 0 0upx 4upx rgba(0, 0, 0, 0.157), 0 0upx 4upx rgba(0, 0, 0, 0.227);
+		box-shadow: 0 0px 2px rgba(0, 0, 0, 0.157), 0 0px 2px rgba(0, 0, 0, 0.227);
 	}
 
 	.toolbar .iconfont {
 		display: inline-block;
 		cursor: pointer;
-		height: 61.6upx;
-		width: 61.6upx;
-		margin: 13upx 0 11upx 0upx;
-		font-size: 33upx;
-		padding: 10upx 13upx 11upx 8upx;
+		height: 61.3px;
+		width: 61.3px;
+		margin: 6.5px 0 5.5px 0px;
+		font-size: 16.5px;
+		padding: 5px 6.5px 5.5px 4px;
 		color: #757575;
-		border-radius: 11upx;
+		border-radius: 5.5px;
 		text-align: center;
 		background: none;
 		border: none;

@@ -1,21 +1,21 @@
 <template>
     <view>
         <page-head :title="title"></page-head>
-        <view style="padding:200upx 15%;">
+        <view style="padding:100px 15%;">
             <button type="primary" @tap="showBanner">打开弹窗</button>
         </view>
         <!-- 弹出层 -->
         <view class="uni-banner" style="background:#FFFFFF;" v-if="bannerShow">
             <view style="justify-content:flex-end;" @tap="closeBanner">
-                <view style="justify-content:flex-end; text-align:right; padding:20upx;">
+                <view style="justify-content:flex-end; text-align:right; padding:10px;">
                     <text class="uni-icon uni-icon-close"></text>
                 </view>
             </view>
             <view>
                 <image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" style="width:100%;" mode="widthFix"></image>
             </view>
-            <view style="padding:50upx 0; padding-bottom:68upx;">
-                <button type='warn' class="mini-btn" style="background:#F6644D; margin:0 80upx;">一个按钮</button>
+            <view style="padding:25px 0; padding-bottom:34px;">
+                <button type='warn' class="mini-btn" style="background:#F6644D; margin:0 40px;">一个按钮</button>
             </view>
         </view>
         <view class="uni-mask" v-if="bannerShow"></view>
@@ -66,7 +66,7 @@
         left: 50%;
         top: 50%;
         background: #FFF;
-        border-radius: 10upx;
+        border-radius: 5px;
         z-index: 99;
         transform: translate(-50%, -50%);
     }

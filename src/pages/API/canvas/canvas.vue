@@ -26,11 +26,11 @@
 			}
 		},
 		onReady: function() {
-			context = uni.createCanvasContext('canvas')
+			context = Lemix.createCanvasContext('canvas')
 		},
 		methods: {
 			toTempFilePath: function() {
-				uni.canvasToTempFilePath({
+				Lemix.canvasToTempFilePath({
 					canvasId: 'canvas',
 					success: function(res) {
 						console.log(res.tempFilePath)
@@ -337,26 +337,26 @@
 <style>
 	.canvas-element-wrapper {
 		display: block;
-		margin-bottom: 100upx;
+		margin-bottom: 50px;
 	}
 
 	.canvas-element {
 		width: 100%;
-		height: 500upx;
+		height: 250px;
 		background-color: #ffffff;
 	}
 
 	.canvas-buttons {
-		padding: 30upx 50upx 10upx;
+		padding: 15px 25px 5px;
 		width: 100%;
-		height: 360upx;
+		height: 180px;
 		box-sizing: border-box;
 	}
 
 	.canvas-button {
 		float: left;
 		line-height: 2;
-		width: 300upx;
-		margin: 15upx 12upx;
+		width: 150px;
+		margin: 7.5px 6px;
 	}
 </style>

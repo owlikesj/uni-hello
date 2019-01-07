@@ -47,7 +47,7 @@
 		},
 		onReady: function(res) {
 			// #ifndef MP-ALIPAY
-			this.videoContext = uni.createVideoContext('myVideo')
+			this.videoContext = Lemix.createVideoContext('myVideo')
 			// #endif
 		},
 		methods: {
@@ -59,7 +59,7 @@
 				this.danmuValue = '';
 			},
 			videoErrorCallback: function(e) {
-				uni.showModal({
+				Lemix.showModal({
 					content: e.target.errMsg,
 					showCancel: false
 				})
@@ -79,6 +79,6 @@
 
 <style>
 	video {
-		width: 690upx;
+		width: 345px;
 	}
 </style>

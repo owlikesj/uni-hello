@@ -75,27 +75,27 @@
 
 <style>
 	.swiper {
-		height: 300upx;
+		height: 150px;
 	}
 	.swiper-item {
 		display: block;
-		height: 300upx;
-		line-height: 300upx;
+		height: 150px;
+		line-height: 150px;
 		text-align: center;
 	}
 
 	.swiper-list {
-		margin-top: 40upx;
+		margin-top: 20px;
 		margin-bottom: 0;
 	}
 	
 	.uni-common-mt{
-		margin-top:60upx;
+		margin-top:30px;
 		position:relative;
 	}
 	
 	.info {
 		position: absolute;
-		right:20upx;
+		right:10px;
 	}
 </style>

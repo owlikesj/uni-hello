@@ -60,7 +60,7 @@
 				this.$nextTick(function() {
 					this.scrollTop = 0
 				});
-				uni.showToast({
+				Lemix.showToast({
 					icon:"none",
 					title:"纵向滚动 scrollTop 值已被修改为 0"
 				})
@@ -71,7 +71,7 @@
 
 <style>
 	.scroll-Y {
-		height: 300upx;
+		height: 150px;
 	}
 
 	.scroll-view_H {
@@ -80,18 +80,18 @@
 	}
 
 	.scroll-view-item {
-		height: 300upx;
-		line-height: 300upx;
+		height: 150px;
+		line-height: 150px;
 		text-align: center;
-		font-size: 36upx;
+		font-size: 18px;
 	}
 
 	.scroll-view-item_H {
 		display: inline-block;
 		width: 100%;
-		height: 300upx;
-		line-height: 300upx;
+		height: 150px;
+		line-height: 150px;
 		text-align: center;
-		font-size: 36upx;
+		font-size: 18px;
 	}
 </style>

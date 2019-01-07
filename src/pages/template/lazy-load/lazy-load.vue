@@ -1,7 +1,7 @@
 <template>
     <view>
         <view class="uni-padding-wrap">
-            <view class="uni-helllo-text" style="padding:30upx 0;">
+            <view class="uni-helllo-text" style="padding:15px 0;">
 				延迟加载的理念：页面初始化时，暂不加载处于屏幕可见区域之外的图片。该方案会有如下几大好处：
 				<text>\n加快页面渲染速度</text>
 				<text>\n提升页面滚动性能</text>

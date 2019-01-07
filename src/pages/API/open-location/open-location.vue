@@ -57,7 +57,7 @@
 			openLocation: function (e) {
 				console.log(e)
 				var value = e.target.value
-				uni.openLocation({
+				Lemix.openLocation({
 					longitude: Number(value.longitude),
 					latitude: Number(value.latitude),
 					name: value.name,
@@ -70,6 +70,6 @@
 
 <style>
 	.uni-list-cell-left {
-		padding: 0 30upx;
+		padding: 0 15px;
 	}
 </style>

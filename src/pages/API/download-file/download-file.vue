@@ -27,16 +27,16 @@
 		},
 		methods: {
 			downloadImage: function () {
-				uni.showLoading({
+				Lemix.showLoading({
 					title:'下载中'
 				})
 				var self = this
-				uni.downloadFile({
+				Lemix.downloadFile({
 					url: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png",
 					success: (res) => {
 						console.log('downloadFile success, res is', res)
 						self.imageSrc = res.tempFilePath;
-						uni.hideLoading();
+						Lemix.hideLoading();
 					},
 					fail: (err) => {
 						console.log('downloadFile fail, err is:', err)
@@ -49,8 +49,8 @@
 
 <style>
 .img {
-	width: 500upx;
-	height: 500upx;
-	margin: 0 95upx;
+	width: 250px;
+	height: 250px;
+	margin: 0 47.5px;
 }
 </style>

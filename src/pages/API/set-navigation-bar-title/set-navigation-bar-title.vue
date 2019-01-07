@@ -32,7 +32,7 @@
 		methods: {
 			setNaivgationBarTitle: function (e) {
 				let title = e.detail.value.title
-				uni.setNavigationBarTitle({
+				Lemix.setNavigationBarTitle({
 					title: title,
 					success: () => {
 						console.log('setNavigationBarTitle success')

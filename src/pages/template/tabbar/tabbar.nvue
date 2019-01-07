@@ -131,12 +131,12 @@
         },
         methods: {
             goDetail(e) {
-                uni.navigateTo({
+                Lemix.navigateTo({
                     url: '/pages/template/tabbar/detail/detail?data=' + e.title
                 })
             },
             close(index1, index2) {
-            	uni.showModal({
+            	Lemix.showModal({
             		content: '是否删除本条信息？',
             		success: (res) => {
             			if (res.confirm) {
@@ -196,7 +196,7 @@
                 return ary;
             },
             onrefresh(event) {
-            	uni.showToast({
+            	Lemix.showToast({
             		title: "refresh",
             		icon: "none"
             	});

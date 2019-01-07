@@ -42,13 +42,13 @@
 			}
 
 			this.getDetail();
-			uni.setNavigationBarTitle({
+			Lemix.setNavigationBarTitle({
 				title: this.banner.title
 			});
 		},
 		methods: {
 			getDetail() {
-				uni.request({
+				Lemix.request({
 					url: 'https://unidemo.dcloud.net.cn/api/news/36kr/' + this.banner.post_id,
 					success: (data) => {
 						if (data.statusCode == 200) {
@@ -66,7 +66,7 @@
 
 <style>
 	.banner {
-		height: 360upx;
+		height: 180px;
 		overflow: hidden;
 		position: relative;
 		background-color: #ccc;
@@ -77,21 +77,21 @@
 	}
 
 	.banner-title {
-		max-height: 84upx;
+		max-height: 42px;
 		overflow: hidden;
 		position: absolute;
-		left: 30upx;
-		bottom: 30upx;
+		left: 15px;
+		bottom: 15px;
 		width: 90%;
-		font-size: 32upx;
+		font-size: 16px;
 		font-weight: 400;
-		line-height: 42upx;
+		line-height: 21px;
 		color: white;
 		z-index: 11;
 	}
 
 	.article-meta {
-		padding: 20upx 40upx;
+		padding: 10px 20px;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
@@ -99,20 +99,20 @@
 	}
 
 	.article-text {
-		font-size: 26upx;
-		line-height: 50upx;
-		margin: 0 20upx;
+		font-size: 13px;
+		line-height: 25px;
+		margin: 0 10px;
 	}
 
 	.article-author,
 	.article-time {
-		font-size: 30upx;
+		font-size: 15px;
 	}
 
 	.article-content {
-		padding: 0 30upx;
+		padding: 0 15px;
 		overflow: hidden;
-		font-size: 30upx;
-		margin-bottom: 30upx;
+		font-size: 15px;
+		margin-bottom: 15px;
 	}
 </style>

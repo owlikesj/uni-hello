@@ -25,13 +25,13 @@
 		methods: {
 			setText() {
 				this.hasSetText = !this.hasSetText;
-				uni.setNavigationBarTitle({
+				Lemix.setNavigationBarTitle({
 					title: this.hasSetText ? "Hello uni-app" : "默认导航栏"
 				})
 			},
 			setBg() {
 				this.hasSetBg = !this.hasSetBg;
-				uni.setNavigationBarColor({
+				Lemix.setNavigationBarColor({
 					frontColor: this.hasSetBg ? "#ffffff" : "#000000",
 					backgroundColor: this.hasSetBg ? "#007AFF" : "#F8F8F8"
 				})

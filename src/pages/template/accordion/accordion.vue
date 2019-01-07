@@ -9,9 +9,9 @@
                             {{list.title}}
                         </view>
                         <view class="uni-collapse-content" :class="list.show ? 'uni-active' : ''">
-                            <swiper v-if="list.type === 'swiper'" autoplay="true" indicator-dots="true" circular="true" style="height: 400upx;">
+                            <swiper v-if="list.type === 'swiper'" autoplay="true" indicator-dots="true" circular="true" style="height: 200px;">
                                 <swiper-item v-for="(img,key) in imgUrls" :key="key">
-                                    <image :src="img" style="height: 400upx;" />
+                                    <image :src="img" style="height: 200px;" />
                                 </swiper-item>
                             </swiper>
                             <view v-if="list.type === 'font'" class="page-pd">
@@ -86,7 +86,7 @@
 
 <style>
     .list-collapse {
-        padding-left: 36upx;
+        padding-left: 18px;
         box-sizing: border-box;
     }
 
@@ -95,6 +95,6 @@
     }
 
     .page-pd {
-        padding: 36upx;
+        padding: 18px;
     }
 </style>

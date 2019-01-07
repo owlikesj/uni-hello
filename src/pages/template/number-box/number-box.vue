@@ -35,7 +35,7 @@
 				<text>{{numberValue3}}</text>
 			</view>
 		</view>
-		<view style="height:80upx;"></view>
+		<view style="height:40px;"></view>
 	</view>
 </template>
 <script>

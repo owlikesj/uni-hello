@@ -53,7 +53,7 @@
 			this.playTime = this.$backgroundAudioData.playTime;
 			this.formatedPlayTime = this.$backgroundAudioData.formatedPlayTime;
 			
-			let bgAudioMannager = uni.getBackgroundAudioManager();
+			let bgAudioMannager = Lemix.getBackgroundAudioManager();
 			if(!bgAudioMannager.title){
 				bgAudioMannager.title = '致爱丽丝';
 			}
@@ -116,12 +116,12 @@
 
 <style>
 	image {
-		width: 150upx;
-		height: 150upx;
+		width: 75px;
+		height: 75px;
 	}
 
 	.page-body-text {
-		padding: 0 30upx;
+		padding: 0 15px;
 	}
 
 	.page-body-wrapper {
@@ -129,22 +129,22 @@
 	}
 
 	.page-body-info {
-		padding-bottom: 50upx;
+		padding-bottom: 25px;
 	}
 
 	.time-big {
-		font-size: 60upx;
-		margin: 20upx;
+		font-size: 30px;
+		margin: 10px;
 	}
 
 	.slider {
-		width:630upx;
+		width:315px;
 	}
 
 	.play-time {
-		font-size: 28upx;
+		font-size: 14px;
 		width:100%;
-		padding: 20upx 0;
+		padding: 10px 0;
 		display: flex;
 		justify-content: space-between;
 		box-sizing: border-box;
@@ -153,11 +153,11 @@
 	.page-body-buttons {
 		display: flex;
 		justify-content: space-around;
-		margin-top: 100upx;
+		margin-top: 50px;
 	}
 
 	.page-body-button {
-		width: 250upx;
+		width: 125px;
 		text-align: center;
 	}
 </style>

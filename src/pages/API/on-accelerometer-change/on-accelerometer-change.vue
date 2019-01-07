@@ -27,24 +27,24 @@
 			}
 		},
 		onUnload() {
-			uni.stopAccelerometer();
+			Lemix.stopAccelerometer();
 		},
 		methods: {
 			//#ifdef APP-PLUS
 			shake() {
-				uni.navigateTo({
+				Lemix.navigateTo({
 					url: '/platforms/app-plus/shake/shake'
 				})
 			},
 			//#endif
 			watchAcce() {
-				uni.onAccelerometerChange((res) => {
+				Lemix.onAccelerometerChange((res) => {
 					this.value = "监听设备的加速度变化:\n" + "X轴：" + res.x.toFixed(2) + "\nY轴：" + res.y.toFixed(2) +
 						"\nZ轴：" + res.z.toFixed(2);
 				})
 			},
 			stopAcce() {
-				uni.stopAccelerometer()
+				Lemix.stopAccelerometer()
 			}
 		}
 	}
@@ -54,6 +54,6 @@
 	.shake {
 		background-color: #FFCC33;
 		color: #ffffff;
-		margin-bottom: 50upx;
+		margin-bottom: 25px;
 	}
 </style>

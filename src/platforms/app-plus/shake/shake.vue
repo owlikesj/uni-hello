@@ -17,12 +17,12 @@
 			}
 		},
 		onLoad: function () {
-			let music = uni.createInnerAudioContext();
+			let music = Lemix.createInnerAudioContext();
 			music.src = 'https://img-cdn-qiniu.dcloud.net.cn/uniapp/shake/shake.wav';
 
 			let index = 1,
 				t = null;
-			uni.onAccelerometerChange((res) => {
+			Lemix.onAccelerometerChange((res) => {
 				if (Math.abs(res.x) + Math.abs(res.y) + Math.abs(res.z) > 20 && !this.show) {
 					music.play();
 					setTimeout(() => {
@@ -45,7 +45,7 @@
 		},
 		onUnload() {
 			this.show = false;
-			uni.stopAccelerometer();
+			Lemix.stopAccelerometer();
 		}
 	}
 </script>

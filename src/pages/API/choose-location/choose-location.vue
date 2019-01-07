@@ -2,7 +2,7 @@
 	<view>
 		<page-head :title="title"></page-head>
 		<view class="uni-padding-wrap">
-			<view style="background:#FFFFFF; padding:40upx;">
+			<view style="background:#FFFFFF; padding:20px;">
 				<view class="uni-hello-text uni-center">当前位置信息</view>
 				<block v-if="hasLocation === false">
 					<view class="uni-h2 uni-center uni-common-mt">未选择位置</view>
@@ -39,7 +39,7 @@
 		},
 		methods: {
 			chooseLocation: function () {
-				uni.chooseLocation({
+				Lemix.chooseLocation({
 					success: (res) => {
 						this.hasLocation = true,
 							this.location = formatLocation(res.longitude, res.latitude),
@@ -57,6 +57,6 @@
 <style>
 	.page-body-info {
 		padding-bottom: 0;
-		height: 440upx;
+		height: 220px;
 	}
 </style>

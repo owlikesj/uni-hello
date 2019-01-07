@@ -53,7 +53,7 @@
 						data.push(i)
 					}
 					this.data = this.data.concat(data);
-					uni.stopPullDownRefresh();
+					Lemix.stopPullDownRefresh();
 				}, 300);
 			},
 			setDate() {
@@ -70,13 +70,13 @@
 
 <style>
 	.text {
-		margin: 16upx 0;
+		margin: 8px 0;
 		width:100%;
 		background-color: #fff;
-		height: 120upx;
-		line-height: 120upx;
+		height: 60px;
+		line-height: 60px;
 		text-align: center;
 		color: #555;
-		border-radius: 8upx;
+		border-radius: 4px;
 	}
 </style>

@@ -2,7 +2,7 @@
 	<view>
 		<page-head :title="title"></page-head>
 			<view class="uni-padding-wrap">
-				<view style="background:#FFF; padding:50upx 0;">
+				<view style="background:#FFF; padding:25px 0;">
 					<view class="uni-hello-text uni-center">支付金额</text></view>
 					<view class="uni-h1 uni-center uni-common-mt"><text class="rmbLogo">￥</text>0.01</view>
 					<view class="uni-hello-text uni-center uni-common-mt">实际应用中可自定义金额</text></view>
@@ -30,7 +30,7 @@
 		},
 		onLoad: function() {
 			// #ifdef APP-PLUS
-			uni.getProvider({
+			Lemix.getProvider({
 				service: "payment",
 				success: (e) => {
 					console.log("payment success", e);
@@ -61,15 +61,15 @@
 			weixinPay() {
 				console.log("发起支付");
 				this.loading = true;
-				uni.login({
+				Lemix.login({
 					success: (e) => {
 						console.log("login success", e);
-						uni.request({
+						Lemix.request({
 							url: `https://unidemo.dcloud.net.cn/payment/wx/mp?code=${e.code}&amount=0.01`,
 							success: (res) => {
 								console.log("pay request success", res);
 								if (res.statusCode !== 200) {
-									uni.showModal({
+									Lemix.showModal({
 										content: "支付失败，请重试！",
 										showCancel: false
 									});
@@ -78,19 +78,19 @@
 								if (res.data.ret === 0) {
 									console.log("得到接口prepay_id", res.data.payment);
 									let paymentData = res.data.payment;
-									uni.requestPayment({
+									Lemix.requestPayment({
 										timeStamp: paymentData.timeStamp,
 										nonceStr: paymentData.nonceStr,
 										package: paymentData.package,
 										signType: 'MD5',
 										paySign: paymentData.paySign,
 										success: (res) => {
-											uni.showToast({
+											Lemix.showToast({
 												title: "感谢您的赞助!"
 											})
 										},
 										fail: (res) => {
-											uni.showModal({
+											Lemix.showModal({
 												content: "支付失败,原因为: " + res.errMsg,
 												showCancel: false
 											})
@@ -100,7 +100,7 @@
 										}
 									})
 								} else {
-									uni.showModal({
+									Lemix.showModal({
 										content: res.data.desc,
 										showCancel: false
 									})
@@ -109,7 +109,7 @@
 							fail: (e) => {
 								console.log("fail", e);
 								this.loading = false;
-								uni.showModal({
+								Lemix.showModal({
 									content: "支付失败,原因为: " + e.errMsg,
 									showCancel: false
 								})
@@ -119,7 +119,7 @@
 					fail: (e) => {
 						console.log("fail", e);
 						this.loading = false;
-						uni.showModal({
+						Lemix.showModal({
 							content: "支付失败,原因为: " + e.errMsg,
 							showCancel: false
 						})
@@ -132,24 +132,24 @@
 				console.log("得到订单信息", orderInfo);
 				if (orderInfo.statusCode !== 200) {
 					console.log("获得订单信息失败", orderInfo);
-					uni.showModal({
+					Lemix.showModal({
 						content: "获得订单信息失败",
 						showCancel: false
 					})
 					return;
 				}
-				uni.requestPayment({
+				Lemix.requestPayment({
 					provider: e.id,
 					orderInfo: orderInfo.data,
 					success: (e) => {
 						console.log("success", e);
-						uni.showToast({
+						Lemix.showToast({
 							title: "感谢您的赞助!"
 						})
 					},
 					fail: (e) => {
 						console.log("fail", e);
-						uni.showModal({
+						Lemix.showModal({
 							content: "支付失败,原因为: " + e.errMsg,
 							showCancel: false
 						})
@@ -166,7 +166,7 @@
 				// #endif
 				let url = 'https://demo.dcloud.net.cn/payment/?payid=' + e + '&appid=' + appid + '&total=0.01';
 				return new Promise((res) => {
-					uni.request({
+					Lemix.request({
 						url: url,
 						success: (result) => {
 							res(result);
@@ -183,7 +183,7 @@
 
 <style>
 	.rmbLogo {
-		font-size: 40upx;
+		font-size: 20px;
 	}
 
 	button {

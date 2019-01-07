@@ -66,16 +66,16 @@
 
 <style>
 	.list-view {
-		padding:10upx 0;
+		padding:5px 0;
 	}
 
 	.list-item {
-		margin: 20upx 0;
-		height: 100upx;
-		line-height: 100upx;
+		margin: 10px 0;
+		height: 50px;
+		line-height: 50px;
 		width: 100%;
-		border-radius: 10upx;
-		border: 1upx solid #eee;
+		border-radius: 5px;
+		border: 0.5px solid #eee;
 		text-align: center;
 		background:#FFF;
 	}

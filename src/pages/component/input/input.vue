@@ -91,7 +91,7 @@
 			},
 			hideKeyboard: function(event) {
 				if (event.target.value === '123') {
-					uni.hideKeyboard();
+					Lemix.hideKeyboard();
 				}
 			},
 			clearInput: function(event) {
@@ -115,6 +115,6 @@
 
 <style>
 	.title {
-		padding: 10upx 25upx;
+		padding: 5px 12.5px;
 	}
 </style>

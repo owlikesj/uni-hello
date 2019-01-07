@@ -40,7 +40,7 @@
 		},
 		onLoad() {
 			this.version = plus.runtime.version;
-			uni.getProvider({
+			Lemix.getProvider({
 				service: 'share',
 				success: (e) => {
 					let data = [];
@@ -76,16 +76,16 @@
 		},
 		methods:{
 			save(){
-				uni.showActionSheet({
+				Lemix.showActionSheet({
 					itemList:['保存图片到相册'],
 					success: () => {
 						plus.gallery.save('https://img.cdn.aliyun.dcloud.net.cn/guide/uniapp/app_download.png', function() {
-							uni.showToast({
+							Lemix.showToast({
 								title:'保存成功',
 								icon:'none'
 							})
 						}, function() {
-							uni.showToast({
+							Lemix.showToast({
 								title:'保存失败，请重试！',
 								icon:'none'
 							})
@@ -95,7 +95,7 @@
 			},
 			share(e) {
 				if (this.providerList.length === 0) {
-					uni.showModal({
+					Lemix.showModal({
 						title: '当前环境无分享渠道!',
 						showCancel: false
 					})
@@ -104,10 +104,10 @@
 				let itemList = this.providerList.map(function (value) {
 					return value.name
 				})
-				uni.showActionSheet({
+				Lemix.showActionSheet({
 					itemList: itemList,
 					success: (res) => {
-						uni.share({
+						Lemix.share({
 							provider: this.providerList[res.tapIndex].id,
 							scene: this.providerList[res.tapIndex].type && this.providerList[res.tapIndex].type === 'WXSenceTimeline' ? 'WXSenceTimeline' : "WXSceneSession",
 							type: 0,
@@ -119,7 +119,7 @@
 								console.log("success:" + JSON.stringify(res));
 							},
 							fail: (e) => {
-								uni.showModal({
+								Lemix.showModal({
 									content: e.errMsg,
 									showCancel:false
 								})

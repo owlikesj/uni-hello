@@ -122,9 +122,9 @@
 <style>
     .icon-item {
         display: inline-flex;
-        width: 105upx;
-        height: 105upx;
-        margin: 5upx;
+        width: 52.5px;
+        height: 52.5px;
+        margin: 2.5px;
         justify-content: center;
     }
 </style>

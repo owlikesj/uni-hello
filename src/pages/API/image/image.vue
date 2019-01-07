@@ -115,7 +115,7 @@
 							return;
 						}
 					}
-					uni.chooseImage({
+					Lemix.chooseImage({
 						sourceType: sourceType[this.sourceTypeIndex],
 						sizeType: sizeType[this.sizeTypeIndex],
 						count: this.imageList.length + this.count[this.countIndex] > 9 ? 9 - this.imageList.length : this.count[this.countIndex],
@@ -126,7 +126,7 @@
 				},
 				isFullImg: function() {
 					return new Promise((res) => {
-						uni.showModal({
+						Lemix.showModal({
 							content: "已经有9张图片了,是否清空现有图片？",
 							success: (e) => {
 								if (e.confirm) {
@@ -144,7 +144,7 @@
 				},
 				previewImage: function(e) {
 					var current = e.target.dataset.src
-					uni.previewImage({
+					Lemix.previewImage({
 						current: current,
 						urls: this.imageList
 					})
@@ -155,10 +155,10 @@
 
 <style>
 	.cell-pd {
-		padding: 22upx 30upx;
+		padding: 11px 15px;
 	}
 
 	.list-pd {
-		margin-top: 50upx;
+		margin-top: 25px;
 	}
 </style>

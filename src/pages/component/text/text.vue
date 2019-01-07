@@ -59,15 +59,15 @@
 
 <style>
 	.text-box {
-		margin-bottom: 40upx;
-		padding: 40upx 0;
+		margin-bottom: 20px;
+		padding: 20px 0;
 		display: flex;
-		min-height: 300upx;
+		min-height: 150px;
 		background-color: #FFFFFF;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		font-size: 30upx;
+		font-size: 15px;
 		color: #353535;
 		line-height: 1.8;
 	}

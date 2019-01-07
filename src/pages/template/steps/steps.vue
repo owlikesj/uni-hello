@@ -21,7 +21,7 @@
 				</view>
 			</view>
 		</view>
-		<view style="padding:30upx 0; text-align:center;">
+		<view style="padding:15px 0; text-align:center;">
 			您也可以把数字步骤改成icon图标
 		</view>
 	</view>

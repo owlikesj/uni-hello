@@ -8,7 +8,7 @@
 	export default {
 		methods: {
 			getMessage(e) {
-				uni.showModal({
+				Lemix.showModal({
 					content: JSON.stringify(e.detail),
 					showCancel: false
 				})

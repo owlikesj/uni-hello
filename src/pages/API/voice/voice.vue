@@ -82,7 +82,7 @@
 			this.end();
 		},
 		onLoad: function() {
-			music = uni.createInnerAudioContext();
+			music = Lemix.createInnerAudioContext();
 			music.onEnded(() => {
 				clearInterval(playTimeInterval)
 				var playTime = 0
@@ -91,7 +91,7 @@
 				this.formatedPlayTime = util.formatTime(playTime);
 				this.playTime = playTime;
 			});
-			recorderManager = uni.getRecorderManager();
+			recorderManager = Lemix.getRecorderManager();
 			recorderManager.onStart(() => {
 				console.log('recorder start');
 			});
@@ -152,14 +152,14 @@
 
 <style>
 	image {
-		width: 150upx;
-		height: 150upx;
+		width: 75px;
+		height: 75px;
 	}
 
 	.page-body-wrapper {
 		justify-content: space-between;
 		flex-grow: 1;
-		margin-bottom: 300upx;
+		margin-bottom: 150px;
 	}
 
 	.page-body-time {
@@ -169,31 +169,31 @@
 	}
 
 	.time-big {
-		font-size: 60upx;
-		margin: 20upx;
+		font-size: 30px;
+		margin: 10px;
 	}
 
 	.time-small {
-		font-size: 30upx;
+		font-size: 15px;
 	}
 
 	.page-body-buttons {
-		margin-top: 60upx;
+		margin-top: 30px;
 		display: flex;
 		justify-content: space-around;
 	}
 
 	.page-body-button {
-		width: 250upx;
+		width: 125px;
 		text-align: center;
 	}
 
 	.button-stop-record {
-		width: 110upx;
-		height: 110upx;
-		border: 20upx solid #fff;
+		width: 55px;
+		height: 55px;
+		border: 10px solid #fff;
 		background-color: #f55c23;
-		border-radius: 130upx;
+		border-radius: 65px;
 		margin: 0 auto;
 	}
 </style>

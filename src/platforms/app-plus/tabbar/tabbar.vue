@@ -123,12 +123,12 @@
         },
         methods: {
             goDetail(e) {
-                uni.navigateTo({
+                Lemix.navigateTo({
                     url: '/pages/template/tabbar/detail/detail?data=' + e.title
                 })
             },
             close(index1, index2) {
-                uni.showModal({
+                Lemix.showModal({
                     content: '是否删除本条信息？',
                     success: (res) => {
                         if (res.confirm) {
@@ -168,7 +168,7 @@
                     let result = await this.getElSize(this.tabBars[i].id);
                     width += result.width;
                 }
-                let winWidth = uni.getSystemInfoSync().windowWidth,
+                let winWidth = Lemix.getSystemInfoSync().windowWidth,
                     nowElement = await this.getElSize(this.tabBars[index].id),
                     nowWidth = nowElement.width;
                 if (width + nowWidth - tabBarScrollLeft > winWidth) {
@@ -182,7 +182,7 @@
             },
             getElSize(id) { //得到元素的size
                 return new Promise((res, rej) => {
-                    uni.createSelectorQuery().select("#" + id).fields({
+                    Lemix.createSelectorQuery().select("#" + id).fields({
                         size: true,
                         scrollOffset: true
                     }, (data) => {

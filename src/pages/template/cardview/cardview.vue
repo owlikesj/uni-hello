@@ -36,7 +36,7 @@
 				</view>
 			</view>
 		</view>
-		<view style="height:80upx;"></view>
+		<view style="height:40px;"></view>
     </view>
 </template>
 
@@ -53,15 +53,15 @@
 <style>
 	
 	.uni-card{
-		margin-top:50upx;
+		margin-top:25px;
 	}
 	
     .page {
-        padding-top: 60upx; background: #efeff4;
+        padding-top: 30px; background: #efeff4;
     }
 	
     .image-view {
-        height: 480upx;
+        height: 240px;
         overflow: hidden;
     }
 

@@ -11,14 +11,15 @@
 			</view>
 			<!-- #endif -->
 		</view>
-		<view class="uni-padding-wrap" style="margin-top:30upx;">
+		<view class="uni-padding-wrap" style="margin-top:15px;">
 			这是抽屉式导航组件使用示例，可以指定菜单左侧或者右侧弹出（仅初始化生效），组件内部可以放置任何内容。点击页面右上角的按钮即可显示导航菜单。
 		</view>
 		<uni-drawer :visible="rightDrawerVisible" mode="right" @close="closeRightDrawer">
-			<view style="padding:30upx;">
+			<view style="padding:15px;">
 				<view class="uni-title">抽屉式导航</view>
 				<view class="uni-helllo-text">
-					这是抽屉式导航组件使用示例，你可以在这里放置任何内容。关闭抽屉式导航有多种方式：</text>
+					<uni-badge text="123" type="success"></uni-badge>
+					<text>这是抽屉式导航组件使用示例，你可以在这里放置任何内容。关闭抽屉式导航有多种方式：</text>
 					<text>\n1.点击本导航之外的任意位置；</text>
 					<text>\n2.点击如下红色按钮；</text>
 					<!-- #ifdef APP-PLUS -->
@@ -47,9 +48,11 @@
 <script>
 	import uniDrawer from '../../../components/uni-drawer.vue';
 	import uniIcon from '../../../components/uni-icon.vue';
+	import uniBadge from '../../../components/uni-badge.vue';
 	export default {
 		components: {
 			uniDrawer,
+			uniBadge,
 			uniIcon
 		},
 		data() {
@@ -66,18 +69,18 @@
 			},
 			item1() {
 				this.rightDrawerVisible = false;
-				uni.showToast({
+				Lemix.showToast({
 					title: 'item1'
 				});
 			},
 			item2() {
 				this.rightDrawerVisible = false;
-				uni.showToast({
+				Lemix.showToast({
 					title: 'item2'
 				});
 			},
 			confirm() {
-				uni.showToast({
+				Lemix.showToast({
 					title: '搜索'
 				})
 			}

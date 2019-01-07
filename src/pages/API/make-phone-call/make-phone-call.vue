@@ -28,7 +28,7 @@
 				}
 			},
 			makePhoneCall: function () {
-				uni.makePhoneCall({
+				Lemix.makePhoneCall({
 					phoneNumber: this.inputValue,
 					success: () => {
 						console.log("成功拨打电话")
@@ -41,10 +41,10 @@
 
 <style>
 	.input {
-		height: 119upx;
-		line-height: 119upx;
-		font-size: 78upx;
-		border-bottom: 1upx solid #E2E2E2;
+		height: 59.5px;
+		line-height: 59.5px;
+		font-size: 39px;
+		border-bottom: 0.5px solid #E2E2E2;
 		text-align:center;
 	}
 </style>

@@ -31,7 +31,7 @@
 			this.animationData = ''
 		},
 		onLoad() {
-			this.animation = uni.createAnimation()
+			this.animation = Lemix.createAnimation()
 		},
 		methods: {
 			rotate: function () {
@@ -94,30 +94,30 @@
 	.animation-element-wrapper {
 		display: flex;
 		width: 100%;
-		padding-top: 150upx;
-		padding-bottom: 150upx;
+		padding-top: 75px;
+		padding-bottom: 75px;
 		justify-content: center;
 		overflow: hidden;
 		background-color: #ffffff;
 	}
 
 	.animation-element {
-		width: 200upx;
-		height: 200upx;
+		width: 100px;
+		height: 100px;
 		background-color: #1AAD19;
 	}
 
 	.animation-buttons {
-		padding:30upx 0;
+		padding:15px 0;
 		width: 100%;
-		height: 360upx;
+		height: 180px;
 	}
 
 	.animation-button {
 		float: left;
 		line-height: 2;
 		width: 44%;
-		margin: 15upx 3%;
+		margin: 7.5px 3%;
 	}
 
 	.animation-button-reset {

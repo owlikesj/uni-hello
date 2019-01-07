@@ -59,7 +59,7 @@
         height: 40upx;
         padding: 0px 16upx;
         line-height: calc(40upx - 2px);
-        font-size: 20rpx;
+        font-size: 10px;
     }
     .uni-tag-disabled{
         opacity: 0.5;

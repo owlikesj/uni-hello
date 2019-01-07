@@ -26,21 +26,21 @@
 		},
 		methods: {
 			chooseImage: function() {
-				uni.chooseImage({
+				Lemix.chooseImage({
 					count: 1,
 					sizeType: ['compressed'],
 					sourceType: ['album'],
 					success: (res) => {
 						console.log('chooseImage success, temp path is', res.tempFilePaths[0])
 						var imageSrc = res.tempFilePaths[0]
-						uni.uploadFile({
+						Lemix.uploadFile({
 							url: 'https://unidemo.dcloud.net.cn/upload',
 							filePath: imageSrc,
 							fileType: 'image',
 							name: 'data',
 							success: (res) => {
 								console.log('uploadImage success, res is:', res)
-								uni.showToast({
+								Lemix.showToast({
 									title: '上传成功',
 									icon: 'success',
 									duration: 1000
@@ -49,7 +49,7 @@
 							},
 							fail: (err) => {
 								console.log('uploadImage fail', err);
-								uni.showModal({
+								Lemix.showModal({
 									content: err.errMsg,
 									showCancel: false
 								});
@@ -72,6 +72,6 @@
 
 	.demo {
 		background: #FFF;
-		padding: 50upx;
+		padding: 25px;
 	}
 </style>

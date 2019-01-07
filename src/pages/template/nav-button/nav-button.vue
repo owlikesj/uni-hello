@@ -20,7 +20,7 @@
 			}
 		},
 		onNavigationBarButtonTap(e) {
-			uni.showToast({
+			Lemix.showToast({
 				title: e.index === 0 ? "你点了分享按钮" : "你点了收藏按钮",
 				icon: "none"
 			})

@@ -59,9 +59,9 @@
 				var formData = e.detail.value;
 				var checkRes = graceChecker.check(formData, rule);
 				if(checkRes){
-					uni.showToast({title:"验证通过!", icon:"none"});
+					Lemix.showToast({title:"验证通过!", icon:"none"});
 				}else{
-					uni.showToast({ title: graceChecker.error, icon: "none" });
+					Lemix.showToast({ title: graceChecker.error, icon: "none" });
 				}
 			},
 			formReset: function (e) {

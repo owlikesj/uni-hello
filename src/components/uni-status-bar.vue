@@ -9,7 +9,7 @@
         computed: {
             style() {
                 //#ifdef MP-WEIXIN
-                var systemInfo = uni.getSystemInfoSync()
+                var systemInfo = Lemix.getSystemInfoSync()
                 return `height:${systemInfo.statusBarHeight}px`
                 //#endif
                 //#ifdef APP-PLUS

@@ -127,7 +127,7 @@
 
 <style>
     .tag-view {
-        margin: 10upx 20upx;
+        margin: 5px 10px;
         display: inline-block;
     }
 </style>

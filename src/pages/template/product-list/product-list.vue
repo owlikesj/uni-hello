@@ -45,7 +45,7 @@ export default {
                 },
                 {
                     image: 'https://img-cdn-qiniu.dcloud.net.cn/uploads/example/product3.jpg',
-                    title: 'Apple MacBook Pro 13.3英寸笔记本电脑（2017款Core i5处理器/8GB内存/256GB硬盘 MupxT2CH/A）',
+                    title: 'Apple MacBook Pro 13.3英寸笔记本电脑（2017款Core i5处理器/8GB内存/256GB硬盘 MrpxT2CH/A）',
                     originalPrice: 12999,
                     favourPrice: 10688,
                     tip: '秒杀'
@@ -92,7 +92,7 @@ export default {
         this.loadData('refresh');
         // 实际开发中通常是网络请求，加载完数据后就停止。这里仅做演示，加延迟为了体现出效果。
         setTimeout(() => {
-            uni.stopPullDownRefresh();
+            Lemix.stopPullDownRefresh();
         }, 2000);
     },
     onReachBottom() {

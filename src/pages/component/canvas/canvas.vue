@@ -26,7 +26,7 @@
 			}
 		},
 		onReady: function () {
-			context = uni.createCanvasContext('canvas');
+			context = Lemix.createCanvasContext('canvas');
 			this.canvasWidth = this.screenWidth / 750 * 610;
 			this.position = {
 				x:this.canvasWidth/2,
@@ -89,8 +89,8 @@
 
 <style>
 	.canvas {
-		width: 610upx;
-		height: 610upx;
+		width: 305px;
+		height: 305px;
 		background-color: #fff;
 	}
 </style>

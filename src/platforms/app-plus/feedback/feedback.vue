@@ -82,7 +82,7 @@
                 this.imageList.splice(e,1);
             },
             chooseMsg() { //快速输入
-                uni.showActionSheet({
+                Lemix.showActionSheet({
                     itemList: this.msgContents,
                     success: (res) => {
                         this.sendDate.content = this.msgContents[res.tapIndex];
@@ -90,7 +90,7 @@
                 })
             },
             chooseImg() { //选择图片
-                uni.chooseImage({
+                Lemix.chooseImage({
                     sourceType: ["camera", "album"],
                     sizeType: "compressed",
                     count: 8 - this.imageList.length,
@@ -103,7 +103,7 @@
                 this.sendDate.score = e;
             },
             previewImage() { //预览图片
-                uni.previewImage({
+                Lemix.previewImage({
                     urls: this.imageList
                 });
             },
@@ -115,13 +115,13 @@
                         uri: value
                     }
                 })
-                uni.uploadFile({
+                Lemix.uploadFile({
                     url: "https://service.dcloud.net.cn/feedback",
                     files: imgs,
                     formData: this.sendDate,
                     success: (res) => {
                         if (res.statusCode === 200) {
-                            uni.showToast({
+                            Lemix.showToast({
                                 title: "反馈成功!"
                             });
                             this.imageList = [];

@@ -21,31 +21,31 @@
 		},
 		methods: {
 			toast1Tap: function () {
-				uni.showToast({
+				Lemix.showToast({
 					title: "默认"
 				})
 			},
 			toast2Tap: function () {
-				uni.showToast({
+				Lemix.showToast({
 					title: "duration 3000",
 					duration: 3000
 				})
 			},
 			toast3Tap: function () {
-				uni.showToast({
+				Lemix.showToast({
 					title: "loading",
 					icon: "loading",
 					duration: 5000
 				})
 			},
 			toast4Tap: function () {
-				uni.showToast({
+				Lemix.showToast({
 					title: "logo",
 					image: "../../../static/uni.png"
 				})
 			},
 			hideToast: function () {
-				uni.hideToast()
+				Lemix.hideToast()
 			}
 		}
 	}
